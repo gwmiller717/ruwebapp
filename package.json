@@ -1,6 +1,6 @@
 {
-    "name"         : "iot-bluemix",
-    "version"      : "0.5.03",
+    "name"         : "ruwebapp",
+    "version"      : "0.1.01",
     "dependencies": {
         "when": "~3.x",
         "mongodb": "~1.4.x",

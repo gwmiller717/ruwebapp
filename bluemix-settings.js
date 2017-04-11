@@ -53,7 +53,25 @@ var settings = module.exports = {
 
     functionGlobalContext: { },
 
-    storageModule: require("./couchstorage")
+    storageModule: require("./couchstorage"),
+    
+    //
+    // Secure Node-RED editor.
+    //
+    adminAuth: {
+        type: "credentials",
+        users: [{
+            username: "coffee",
+            password: "$2a$08$wg2n3YGPQDca5EXoDtIFhOGL9SNYkl0o3SbiQ3YKZRb8zmdn8zvQG",
+            permissions: "*"
+        }]
+    },
+    
+    //
+    // Secure http pages served up by our Node-RED application.
+    //
+    httpNodeAuth:   {user:"coffee",pass:"$2a$08$wg2n3YGPQDca5EXoDtIFhOGL9SNYkl0o3SbiQ3YKZRb8zmdn8zvQG"},
+    httpStaticAuth: {user:"coffee",pass:"$2a$08$wg2n3YGPQDca5EXoDtIFhOGL9SNYkl0o3SbiQ3YKZRb8zmdn8zvQG"}
 }
 
 if (process.env.NODE_RED_USERNAME && process.env.NODE_RED_PASSWORD) {
