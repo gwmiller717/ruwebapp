@@ -16,11 +16,9 @@
 
 var path = require("path");
 var when = require("when");
-var fs = require("fs");
 
 var cfenv = require("cfenv");
 var appEnv = cfenv.getAppEnv();
-
 
 var VCAP_APPLICATION = JSON.parse(process.env.VCAP_APPLICATION);
 var VCAP_SERVICES = JSON.parse(process.env.VCAP_SERVICES);
@@ -68,18 +66,6 @@ var settings = module.exports = {
             permissions: "*"
         }]
     },
-    
-    //
-    // 4.12.2017 Unable to get this to work - wam.
-    //
-    //https: {
-    //   key: fs.readFileSync('privatekey.pem'),
-    //   cert: fs.readFileSync('certificate.pem')
-    //},
-
-    // The following property can be used to cause insecure HTTP connections to
-    // be redirected to HTTPS.
-    requireHttps: true,
     
     //
     // Secure http pages served up by our Node-RED application.
