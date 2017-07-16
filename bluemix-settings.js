@@ -16,6 +16,8 @@
 
 var path = require("path");
 var when = require("when");
+var util = require("util");
+var fs = require("fs");
 
 var cfenv = require("cfenv");
 var appEnv = cfenv.getAppEnv();
@@ -62,7 +64,7 @@ var settings = module.exports = {
         type: "credentials",
         users: [{
             username: "coffee",
-            password: "$2a$08$wg2n3YGPQDca5EXoDtIFhOGL9SNYkl0o3SbiQ3YKZRb8zmdn8zvQG",
+            password: "$2a$08$CYutXcvbPKxKG0iEX6tmnOymCVpSPl2YkSCjZeUpSGOECsqAzxkvK",
             permissions: "*"
         }]
     },
@@ -70,8 +72,8 @@ var settings = module.exports = {
     //
     // Secure http pages served up by our Node-RED application.
     //
-    httpNodeAuth:   {user:"coffee",pass:"$2a$08$wg2n3YGPQDca5EXoDtIFhOGL9SNYkl0o3SbiQ3YKZRb8zmdn8zvQG"},
-    httpStaticAuth: {user:"coffee",pass:"$2a$08$wg2n3YGPQDca5EXoDtIFhOGL9SNYkl0o3SbiQ3YKZRb8zmdn8zvQG"}
+    httpNodeAuth:   {user:"coffee",pass:"$2a$08$CYutXcvbPKxKG0iEX6tmnOymCVpSPl2YkSCjZeUpSGOECsqAzxkvK"},
+    httpStaticAuth: {user:"coffee",pass:"$2a$08$CYutXcvbPKxKG0iEX6tmnOymCVpSPl2YkSCjZeUpSGOECsqAzxkvK"}
 }
 
 if (process.env.NODE_RED_USERNAME && process.env.NODE_RED_PASSWORD) {
